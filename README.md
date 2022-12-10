@@ -49,7 +49,7 @@ Le terminal affichera ainsi :
 2. Suivez les instructions affichées par le terminal : renseignez le nombre d'hôtes, le nombre de chambres, et le nombre de lits que votre logement comporte
 3. Le terminal affichera le prix estimé obtenu et sa fiabilité
 
-### Pour trouver un k tel que les performances du modèles soient optimales
+### Pour trouver un k tel que les performances du modèle soient optimales
 
 1. Tapez 2 et appuyez sur Entrée
 2. Le terminal commencera à chercher k, 30 par 30, entre 20 et 500, tel que le MAE est le plus faible. Ensuite, il cherchera entre k + 1 et k + 29. Une fois terminé, il affichera le k obtenu
