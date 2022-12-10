@@ -211,7 +211,8 @@ void partie1() {
 // Affiche une barre de chargement pour informer où la recherche en est
 void affichageChargement(int min, int max, int k, int etape) {
     system("clear");
-    printf("Recherche %1$d par %1$d sur les entiers dans [%2$d, %3$d] (k = %4$d)\n" ROUGE "[", etape ? 1 : PAS, min, etape ? max - 1 : max, k - 1);
+    int pasActuel = etape ? 1 : PAS;
+    printf("Recherche %d par %d sur les entiers dans [%d, %d] (k = %d)\n" ROUGE "[", pasActuel, pasActuel, min, etape ? max - 1 : max, etape ? k - 1 : k);
 
     float pos = (float) (k - min)/ (float) (max - min) * TAILLEBARRECHARGEMENT;
     int iterEtape1 = (FIN - DEBUT)/PAS; // Nombre d'itérations effectuées pendant l'étape 1
@@ -257,7 +258,7 @@ void partie2() {
     int kMin = 1;
     float maeMin = 0.0;
 
-    affichageChargement(DEBUT, FIN, DEBUT, 0);
+    affichageChargement(DEBUT, FIN, 0, 0);
 
     for (int k = DEBUT; k <= FIN; k += PAS) {
         float tabPrediction[tailleTabTest];
